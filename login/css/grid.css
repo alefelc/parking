@@ -1,0 +1,76 @@
+body {
+  background-color:#eee;
+  color:#666;
+  font-family:'Ek Mukta',sans-serif;
+  font-weight:200;
+}
+.container {
+  padding-right:15px;
+  padding-left:15px;
+}
+h4 {
+  margin-top:25px;
+}
+.row {
+  margin-top:10%;
+}
+.row .row {
+  margin-top:10px;
+  margin-bottom:0;
+}
+[class*="col-"] {
+  padding-top:15px;
+  padding-bottom:15px;
+}
+.legend {
+  font-size:11px;
+  font-weight:normal;
+  color:#999;
+  margin:5px
+}
+hr {
+  margin-top:40px;
+  margin-bottom:40px;
+}
+.tagline {
+  border-bottom:1px solid #ccc;
+  text-align:center;
+  margin:30px 0;
+}
+.social-btns {
+  text-align:center;
+}
+.btn {
+  font-weight:100;
+}
+.btn-lg {
+  width:100%;
+  background-color:#0088cf;
+  border:0;
+  border-radius:3px;
+}
+.btn-primary {
+  background-color:#0088cf;
+  border:0;
+  border-radius:3px;
+}
+.img-responsive {
+  max-height:320px;
+  margin:0 auto;
+}
+.form-control {
+  box-shadow:none;
+  height:45px;
+  padding:10px 20px
+}
+.has-feedback .form-control-feedback {
+  top:5px;
+  color:#999;
+  margin-right:10px
+}
+.modal-dialog {
+  margin-top:15%
+}
+.modal-content {
+  padding: 20px
+}
