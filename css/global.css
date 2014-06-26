@@ -112,6 +112,34 @@ hr {
     padding-right: 30px;
     padding-left: 30px;
 }
+.social-btns {
+  text-align:center;
+}
+.btn {
+  font-weight:100;
+}
+.btn-lg {
+  width:100%;
+  background-color:#0088cf;
+  border:0;
+  border-radius:3px;
+}
+.btn-primary {
+  background-color:#0088cf;
+  border:0;
+  border-radius:3px;
+}
+.has-feedback .form-control-feedback {
+  top:5px !important;
+  color:#999;
+  margin-right:10px;
+}
+.modal-dialog {
+  margin-top:15%
+}
+.modal-content {
+  padding: 20px
+}
 
 /* Header */
 header {
@@ -139,7 +167,6 @@ header img {
   max-height:320px;
   margin:0 auto;
 }
-
 /* Dropdown */
 .dropdown-panel {
     display: block;
@@ -488,12 +515,13 @@ only screen and (min-device-pixel-ratio: 1.5) {
     -moz-transition:.3s;
     transition:.3s;
     border-radius: 4px;
-    height: 50px;
+    height: 45px;
     background: #fff;
     margin: 0 1px 0 0;
     padding: 10px;
     box-shadow: none;
     font-weight: 200;
+    padding-right: 42.5px;
 }
 
 /* Slider */
