@@ -43,6 +43,53 @@
         height: 500px;
     }
     </style>
+    <script>
+        function login() {
+            if (!$("#dni").val()) {
+                alert("completar dni");
+            }
+            $.ajax({
+                type: "POST",
+                url: "http://www.ztechsys.com/BER/wsHandler.php",
+                data: {
+                    action: "login_person",
+                    dni: $("#dni").val(),
+                    password: $("#password").val()
+                },
+                dataType: "json",
+                success: function(response) {
+                    if (response.error) {
+                        showErrorMessage();
+                    } else {
+                        //respose = {credit, session_code}
+                        //escribir cookies
+                        setSaldoSectionContent();
+                    }
+                }
+            });
+        }
+        function setSaldoSectionContent() {
+            $("#divSaldoOrLogin").empty();
+            $("#divSaldoOrLogin").html('
+                <div class="row subscribe">
+                    <div class=".col-xs-6">
+                    <div id="content">
+                    <h2 class="title">Saldo Actual</h2>
+                <h4 class="title">$ ' + response.credit + '</h4>
+                <h2 class="title" style="margin-top:30px">Recarga Saldo</h2>
+                </div>
+                <form action="#" method="post">
+                    <input type="email" name="Email" required="" class="subscribe-box" placeholder="Ingresa el PIN">
+                    <input type="submit" value="Cargar" name="subscribe" class="subscribe-btn">
+                    </form>
+                </div>
+                </div>
+            ');
+        }
+        function showErrorMessage() {
+            alert("Login incorrecto");
+        }
+    </script>
     <script type="text/javascript">
     $(function() {
         $('#test1').gmap3({
@@ -50,7 +97,7 @@
                 options: {
                     center: [-34.5869392, -58.4566448],
                     zoom: 14,
-                    scrollwheel: false,
+                    scrollwheel: false
                 }
             },
             marker: {
@@ -132,7 +179,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-6">
+                            <div class="col-xs-12 col-sm-6" id="divSaldoOrLogin">
                                 <div class="row subscribe">
                                     <div class=".col-xs-6">
                                         <div id="content">

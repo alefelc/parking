@@ -41,11 +41,11 @@
 			<form action="#" method="get" accept-charset="utf-8">
 				<form class="form-horizontal" role="form">
 					<div class="form-group has-feedback">
-						<input type="text" class="form-control" id="inputEmail3" placeholder="Usuario">
+						<input type="text" class="form-control" id="dni" name="dni" placeholder="Usuario">
 						<span class="glyphicon glyphicon-user form-control-feedback"></span>
 					</div>
 					<div class="form-group has-feedback">
-						<input type="password" class="form-control" id="inputPassword3" placeholder="Contraseña">
+						<input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
 						<span class="glyphicon glyphicon-lock form-control-feedback"></span>
 					</div>
 					<div class="form-group">
@@ -62,7 +62,7 @@
 											Te enviaremos un Email con tu contraseña
 										</p>
 										</br>
-										<button type="submit" class="btn btn-default">Enviar</button>
+										<button type="button" onclick="javascript:login()" class="btn btn-default">Enviar</button>
 									</form>
 								</div>
 							</div>
